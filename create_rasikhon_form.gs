@@ -1,10 +1,11 @@
 /**
- * Creates the "Rasikhon Merchant Questionnaire" Google Form.
- * Usage: script.google.com -> New project -> paste this file -> Run createRasikhonForm
- * (authorise when prompted). The form's edit and share links appear in the Logs.
+ * Fills the open Google Form with the "Rasikhon Merchant Questionnaire".
+ * Usage: open the (empty) form -> three-dot menu -> Apps Script -> paste this file
+ * -> Run createRasikhonForm (authorise when prompted). Run it once only.
  */
 function createRasikhonForm() {
-  var form = FormApp.create('Rasikhon Merchant Questionnaire');
+  var form = FormApp.getActiveForm();
+  form.setTitle('Rasikhon Merchant Questionnaire');
   form.setDescription('For owners of micro and small businesses in France. Select one answer per question unless stated otherwise.');
   form.setProgressBar(true);
 
